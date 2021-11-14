@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <listeners>
+    <listener class-name="listeneres.Listeneres_B10"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testCases.LoginToMyStoreWithRegisteredUser3">
+        <methods>
+          <include name="initialization"/>
+          <include name="endTest"/>
+          <include name="getTestCaseName"/>
+          <include name="loginToMyStoreWithRegisteredUser3"/>
+        </methods>
+      </class> <!-- testCases.LoginToMyStoreWithRegisteredUser3 -->
+      <class name="testCases.LoginToMyStore2">
+        <methods>
+          <include name="loginToMyStore2"/>
+          <include name="initialization"/>
+          <include name="endTest"/>
+          <include name="getTestCaseName"/>
+        </methods>
+      </class> <!-- testCases.LoginToMyStore2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

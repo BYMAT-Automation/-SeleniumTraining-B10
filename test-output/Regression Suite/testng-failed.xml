@@ -6,6 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testCases.EndToEndTestCase">
+        <methods>
+          <include name="initialization"/>
+          <include name="endTest"/>
+          <include name="endToEndTestCase" invocation-numbers="0"/>
+          <include name="getTestCaseName"/>
+        </methods>
+      </class> <!-- testCases.EndToEndTestCase -->
       <class name="testCases.LoginToMyStoreWithRegisteredUser3">
         <methods>
           <include name="initialization"/>
@@ -14,6 +22,14 @@
           <include name="loginToMyStoreWithRegisteredUser3"/>
         </methods>
       </class> <!-- testCases.LoginToMyStoreWithRegisteredUser3 -->
+      <class name="testCases.LoginToMyStoreWithRegisteredUser2">
+        <methods>
+          <include name="initialization"/>
+          <include name="endTest"/>
+          <include name="getTestCaseName"/>
+          <include name="loginToMyStoreWithRegisteredUser2"/>
+        </methods>
+      </class> <!-- testCases.LoginToMyStoreWithRegisteredUser2 -->
       <class name="testCases.LoginToMyStore2">
         <methods>
           <include name="loginToMyStore2"/>

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
+import pages.HomePage;
 import testBase_B10.TestBase_B10;
 import utility.CommonMethods;
 
@@ -30,13 +31,7 @@ public class LoginToMyStoreWithRegisteredUser3 extends TestBase_B10 {
 	@Test(dataProvider = "data_Collection") 
 	public void loginToMyStoreWithRegisteredUser3(Hashtable<String, String> htData) throws InterruptedException, IOException {
 		
-		//test = report.startTest("LoginToMyStoreWithRegisteredUser");
-		
-		String ptile = driver.getTitle();
-	
-		Assert.assertEquals(ptile, htData.get("Page_Title"));
-		System.out.println("I validated the Page Tile and is:-" +ptile);
-		test.log(LogStatus.PASS, "I validated the Page Tile and is:-" +ptile);  
+		CommonMethods.verifyPageTitle(htData.get("Page_Title"));
 		
 		CommonMethods.clickOnWebElement("SignIn_btn", "Sign In");
 		
@@ -45,6 +40,8 @@ public class LoginToMyStoreWithRegisteredUser3 extends TestBase_B10 {
 		CommonMethods.enterTextIntoTextBox("Pass_RegUser", htData.get("Password"), "Password");
 		
 		CommonMethods.clickOnButton("Sign_In_btn_regUser", "Sign In");
+		
+		HomePage.LoginWithRegisteredUser(htData);
 		
 	}
 

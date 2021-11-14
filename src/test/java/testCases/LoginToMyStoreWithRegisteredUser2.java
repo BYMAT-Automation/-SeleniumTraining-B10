@@ -30,13 +30,7 @@ public class LoginToMyStoreWithRegisteredUser2 extends TestBase_B10 {
 	@Test(dataProvider = "data_Collection") 
 	public void loginToMyStoreWithRegisteredUser2(Hashtable<String, String> htData) throws InterruptedException, IOException {
 		
-		//test = report.startTest("LoginToMyStoreWithRegisteredUser");
-		
-		String ptile = driver.getTitle();
-	
-		Assert.assertEquals(ptile, htData.get("Page_Title"));
-		System.out.println("I validated the Page Tile and is:-" +ptile);
-		test.log(LogStatus.PASS, "I validated the Page Tile and is:-" +ptile);  
+		CommonMethods.verifyPageTitle(htData.get("Page_Title"));
 		
 		CommonMethods.clickOnWebElement("SignIn_btn", "Sign In");
 		

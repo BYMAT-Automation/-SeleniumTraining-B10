@@ -39,7 +39,6 @@ public class TestBase_B10 { // Parent Class
 	public static String testCaseName;
 	public static Hashtable<String, String> ht_RunMode = new Hashtable<String, String>();
 	
-	//@BeforeClass
 	@BeforeSuite
 	public void initialization() throws IOException {
 		
